@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#009688"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="app.magiscamp.animationflip.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="12.5dp"
+                android:layout_height="12.5dp"
+                android:src="@drawable/buletudah"
+                android:layout_marginTop="20dp"
+                android:id="@+id/buletempat"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/buletlima"/>
+
+            <ImageView
+                android:layout_width="12.5dp"
+                android:layout_height="12.5dp"
+                android:src="@drawable/buletbelom"
+                android:layout_marginTop="20dp"
+                android:id="@+id/buletlima"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/buletenam"/>
+
+            <ImageView
+                android:layout_width="12.5dp"
+                android:layout_height="12.5dp"
+                android:src="@drawable/buletbelom"
+                android:layout_marginTop="20dp"
+                android:id="@+id/buletenam"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/title"
+                android:layout_marginTop="40dp"
+                android:text="Bonus"
+                android:textColor="#FFF"
+                android:textSize="40dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/countDownTimer"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="00:00"
+                android:textColor="#FFF"
+                android:textSize="20dp"/>
+
+            <android.support.v7.widget.CardView
+                style="@style/cardViewMainBonus"
+                android:layout_marginLeft="6dp"
+                android:layout_below="@+id/title"
+                app:cardElevation="5dp"
+                android:id="@+id/cv">
+
+                <RelativeLayout
+                    style="@style/relativeCardViewBonus"
+                    android:id="@+id/relCv"
+                    android:onClick="meQuesOne">
+
+                    <ImageView
+                        style="@style/imageCardViewBonus"
+                        android:id="@+id/ques_one"
+                        android:src="@drawable/tennis"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/cardViewMainBonus"
+                android:layout_marginLeft="6dp"
+                android:layout_below="@+id/title"
+                app:cardElevation="5dp"
+                android:id="@+id/cv_tiru">
+
+                <RelativeLayout
+                    style="@style/relativeCardViewBonus"
+                    android:id="@+id/relCvTiru"
+                    android:onClick="meQuesTiruOne">
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/cardViewMainBonus"
+                android:layout_marginLeft="6dp"
+                android:layout_below="@+id/title"
+                app:cardElevation="5dp"
+                android:id="@+id/cvFinal">
+
+                <RelativeLayout
+                    style="@style/relativeCardViewBonus"
+                    android:id="@+id/relCvFinal"
+                    android:clickable="false">
+
+                    <ImageView
+                        style="@style/imageCardViewBonus"
+                        android:id="@+id/ques_oneFinal"
+                        android:src="@drawable/tennis"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/cardViewMainBonus"
+                app:cardElevation="5dp"
+                android:layout_below="@+id/title"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/cv2">
+
+                <RelativeLayout
+                    style="@style/relativeCardViewBonus"
+                    android:id="@+id/relCv2"
+                    android:onClick="meQuesTwo">
+
+                    <ImageView
+                        style="@style/imageCardViewBonus"
+                        android:id="@+id/ques_two"
+                        android:src="@drawable/rugby"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/cardViewMainBonus"
+                app:cardElevation="5dp"
+                android:layout_below="@+id/title"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/cv2_tiru">
+
+                <RelativeLayout
+                    style="@style/relativeCardViewBonus"
+                    android:id="@+id/relCv2Tiru"
+                    android:onClick="meQuesTiruTwo">
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/cardViewMainBonus"
+                app:cardElevation="5dp"
+                android:layout_below="@+id/title"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/cv2Final">
+
+                <RelativeLayout
+                    style="@style/relativeCardViewBonus"
+                    android:id="@+id/relCv2Final"
+                    android:clickable="false">
+
+                    <ImageView
+                        style="@style/imageCardViewBonus"
+                        android:id="@+id/ques_twoFinal"
+                        android:src="@drawable/rugby"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/cardViewMainBonus"
+                app:cardElevation="5dp"
+                android:layout_marginRight="6dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/title"
+                android:id="@+id/cv3">
+
+                <RelativeLayout
+                    style="@style/relativeCardViewBonus"
+                    android:id="@+id/relCv3"
+                    android:onClick="meQuesThree">
+
+                    <ImageView
+                        style="@style/imageCardViewBonus"
+                        android:id="@+id/ques_three"
+                        android:src="@drawable/basketball"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/cardViewMainBonus"
+                app:cardElevation="5dp"
+                android:layout_marginRight="6dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/title"
+                android:id="@+id/cv3_tiru">
+
+                <RelativeLayout
+                    style="@style/relativeCardViewBonus"
+                    android:id="@+id/relCv3Tiru"
+                    android:onClick="meQuesTiruThree">
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/cardViewMainBonus"
+                app:cardElevation="5dp"
+                android:layout_marginRight="6dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/title"
+                android:id="@+id/cv3Final">
+
+                <RelativeLayout
+                    style="@style/relativeCardViewBonus"
+                    android:id="@+id/relCv3Final"
+                    android:clickable="false">
+
+                    <ImageView
+                        style="@style/imageCardViewBonus"
+                        android:id="@+id/ques_threeFinal"
+                        android:src="@drawable/basketball"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/titleDua"
+                android:layout_marginTop="170dp"
+                android:gravity="center"
+                android:textColor="#FFF"
+                android:textSize="30dp"/>
+
+            <android.support.v7.widget.CardView
+                style="@style/cardViewMainBonus"
+                app:cardElevation="5dp"
+                android:layout_marginLeft="6dp"
+                android:layout_below="@+id/titleDua"
+                android:id="@+id/cv4">
+
+                <RelativeLayout
+                    style="@style/relativeCardViewBonus"
+                    android:onClick="meAnsOne"
+                    android:id="@+id/relCv4">
+
+                    <TextView
+                        style="@style/textCardViewBonus"
+                        android:id="@+id/ans_one"
+                        android:layout_marginTop="7.5dp"
+                        android:text="@string/rugbyWord" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/cardViewMainBonus"
+                app:cardElevation="5dp"
+                android:layout_marginLeft="6dp"
+                android:layout_below="@+id/titleDua"
+                android:id="@+id/cv4_tiru">
+
+                <RelativeLayout
+                    style="@style/relativeCardViewBonus"
+                    android:onClick="meAnsTiruOne"
+                    android:id="@+id/relCv4Tiru">
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/cardViewMainBonus"
+                app:cardElevation="5dp"
+                android:layout_below="@+id/titleDua"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/cv5">
+
+                <RelativeLayout
+                    style="@style/relativeCardViewBonus"
+                    android:onClick="meAnsTwo"
+                    android:id="@+id/relCv5">
+
+                    <TextView
+                        style="@style/textCardViewBonus"
+                        android:id="@+id/ans_two"
+                        android:layout_marginTop="7.5dp"
+                        android:text="@string/basketballWord" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/cardViewMainBonus"
+                app:cardElevation="5dp"
+                android:layout_below="@+id/titleDua"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/cv5_tiru">
+
+                <RelativeLayout
+                    style="@style/relativeCardViewBonus"
+                    android:onClick="meAnsTiruTwo"
+                    android:id="@+id/relCv5Tiru">
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/cardViewMainBonus"
+                app:cardElevation="5dp"
+                android:layout_below="@+id/titleDua"
+                android:layout_marginRight="6dp"
+                android:layout_alignParentRight="true"
+                android:id="@+id/cv6">
+
+                <RelativeLayout
+                    style="@style/relativeCardViewBonus"
+                    android:onClick="meAnsThree"
+                    android:id="@+id/relCv6">
+
+                    <TextView
+                        style="@style/textCardViewBonus"
+                        android:id="@+id/ans_three"
+                        android:layout_marginTop="7.5dp"
+                        android:text="@string/tennisWord" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/cardViewMainBonus"
+                app:cardElevation="5dp"
+                android:layout_marginRight="6dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/titleDua"
+                android:id="@+id/cv6_tiru">
+
+                <RelativeLayout
+                    style="@style/relativeCardViewBonus"
+                    android:onClick="meAnsTiruThree"
+                    android:id="@+id/relCv6Tiru">
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:elevation="@dimen/ButtonElevation"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/cv5"
+                android:layout_marginTop="25dp"
+                android:id="@+id/nextLay"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radius_biru">
+
+                <Button
+                    android:onClick="meNext"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Nächste"
+                    android:textAllCaps="false"
+                    android:id="@+id/nextBtn"
+                    style="@style/Button"
+                    android:textColor="#FFF"
+                    android:layout_centerHorizontal="true"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/cv5"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/diksel"
+                android:id="@+id/diksel"/>
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/cv5"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/medsel"
+                android:id="@+id/medsel"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/pauseLay"
+                android:onClick="pauseLay"
+                android:layout_margin="@dimen/fab_margin"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:id="@+id/pause"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/pause"
+                    android:tint="#FFF"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
